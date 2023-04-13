@@ -20,7 +20,7 @@ import com.overzealous.remark.convert.DocumentConverter;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.safety.Cleaner;
-import org.jsoup.safety.Whitelist;
+import org.jsoup.safety.Safelist;
 
 import java.io.File;
 import java.io.IOException;
@@ -80,7 +80,7 @@ public class Remark {
 	 */
 	public Remark(Options options) {
 		this.options = options.getCopy();
-		Whitelist whitelist = Whitelist.basicWithImages()
+		Safelist safelist = Safelist.basicWithImages()
 									  .addTags("div",
                                               "h1", "h2", "h3", "h4", "h5", "h6",
                                               "table", "tbody", "td", "tfoot", "th", "thead", "tr",
@@ -91,23 +91,23 @@ public class Remark {
 									  .addAttributes("td", "colspan", "align", "style")
 									  .addAttributes(":all", "title", "style");
         if(options.preserveRelativeLinks) {
-            whitelist.preserveRelativeLinks(true);
+            safelist.preserveRelativeLinks(true);
         }
 		if(options.abbreviations) {
-			whitelist.addTags("abbr", "acronym");
+			safelist.addTags("abbr", "acronym");
 		}
 		if(options.headerIds) {
 			for(int i=1; i<=6; i++) {
-				whitelist.addAttributes("h"+i, "id");
+				safelist.addAttributes("h"+i, "id");
 			}
 		}
 		for(final IgnoredHtmlElement el : options.getIgnoredHtmlElements()) {
-			whitelist.addTags(el.getTagName());
+			safelist.addTags(el.getTagName());
             if(!el.getAttributes().isEmpty()) {
-                whitelist.addAttributes(el.getTagName(), el.getAttributes().toArray(new String[el.getAttributes().size()]));
+                safelist.addAttributes(el.getTagName(), el.getAttributes().toArray(new String[el.getAttributes().size()]));
             }
 		}
-		cleaner = new Cleaner(whitelist);
+		cleaner = new Cleaner(safelist);
 
 		if(options.getTables().isLeftAsHtml()) {
 			// we need to allow the table nodes to be ignored
