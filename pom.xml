@@ -204,7 +204,7 @@
         <artifactId>commons-lang3</artifactId>
         <version>3.4</version>
         <scope>compile</scope>
-      </dependency
+      </dependency>
       <dependency>
         <groupId>org.apache.avro</groupId>
         <artifactId>avro</artifactId>
