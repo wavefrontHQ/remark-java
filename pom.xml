@@ -237,11 +237,6 @@
         <version>1.6</version>
       </dependency>
       <dependency>
-        <groupId>org.antlr</groupId>
-        <artifactId>antlr4-runtime</artifactId>
-        <version>4.7.2</version>
-      </dependency>
-      <dependency>
         <groupId>com.rubiconproject.oss</groupId>
         <artifactId>jchronic</artifactId>
         <version>0.2.8</version>
