@@ -290,8 +290,7 @@
     <profile>
       <id>release</id>
       <properties>
-        <!-- <gpg.useagent>true</gpg.useagent> -->
-        <gpg.useagent>false</gpg.useagent>
+        <gpg.useagent>true</gpg.useagent>
       </properties>
       <build>
         <plugins>
