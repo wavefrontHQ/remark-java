@@ -4,7 +4,7 @@
 
   <groupId>com.wavefront</groupId>
   <artifactId>remark</artifactId>
-  <version>2023-06.25-SNAPSHOT</version>
+  <version>1.1.0-SNAPSHOT</version>
   <inceptionYear>2011</inceptionYear>
   <packaging>pom</packaging>
 
@@ -26,13 +26,33 @@
       <name>Phil DeJarnett</name>
       <organization>OverZealous Creations, LLC</organization>
       <organizationUrl>http://www.overzealous.com</organizationUrl>
+      <roles>
+        <role>Original Developer</role>
+      </roles>
+    </developer>
+    <developer>
+        <name>Guilherme I F L Weizenmann</name>
+        <email>g.weizenmann@gmail.com</email>
+        <organization>ITQuasar</organization>
+        <organizationUrl>http://itquasar.com</organizationUrl>
+        <roles>
+          <role>Developer</role>
+        </roles>
     </developer>
   </developers>
+  <contributors>
+    <contributor>
+      <name>Alex Boyko</name>
+        <properties>
+          <github>https://github.com/BoykoAlex</github>
+        </properties>
+    </contributor>
+  </contributors>
   <scm>
-    <connection>scm:git:git@github.com:alchen1218/remark-java.git</connection>
-    <developerConnection>scm:git:git@github.com:alchen1218/remark-java.git</developerConnection>
-    <url>git@github.com:alchen1218/remark-java.git</url>
-    <tag>ermark-2023-06.22</tag>
+    <connection>scm:git:git@github.com:wavefronthq/remark-java.git</connection>
+    <developerConnection>scm:git:git@github.com:wavefronthq/remark-java.git</developerConnection>
+    <url>git@github.com:wavefronthq/remark-java.git</url>
+    <tag>HEAD</tag>
   </scm>
 
   <distributionManagement>
