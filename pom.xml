@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.wavefront</groupId>
-  <artifactId>proxy-test</artifactId>
+  <artifactId>ermark</artifactId>
   <version>2023-06.23-SNAPSHOT</version>
   <inceptionYear>2011</inceptionYear>
   <packaging>pom</packaging>
@@ -38,11 +38,11 @@
   <distributionManagement>
     <repository>
       <id>ossrh</id>
-      <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+      <url>https://oss.sonatype.org/content/repositories/releases/</url>
     </repository>
     <snapshotRepository>
       <id>ossrh</id>
-      <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
 
@@ -346,7 +346,7 @@
               </execution>
             </executions>
           </plugin>
-          <!-- <plugin>
+          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
             <version>1.5</version>
@@ -362,8 +362,8 @@
                 </goals>
               </execution>
             </executions>
-          </plugin> -->
-          <!-- <plugin>
+          </plugin>
+          <plugin>
             <groupId>org.sonatype.plugins</groupId>
             <artifactId>nexus-staging-maven-plugin</artifactId>
             <version>1.6.3</version>
@@ -373,7 +373,7 @@
               <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
               <autoReleaseAfterClose>true</autoReleaseAfterClose>
             </configuration>
-          </plugin> -->
+          </plugin>
         </plugins>
       </build>
     </profile>
