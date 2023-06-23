@@ -50,9 +50,9 @@
         </contributor>
     </contributors>
     <scm>
-        <connection>scm:git:git@github.com:giflw/remark-java.git</connection>
-        <developerConnection>scm:git:git@github.com:giflw/remark-java.git</developerConnection>
-        <url>git@github.com:giflw/remark-java.git</url>
+        <connection>scm:git:git@github.com:wavefronthq/remark-java.git</connection>
+        <developerConnection>scm:git:git@github.com:wavefronthq/remark-java.git</developerConnection>
+        <url>git@github.com:wavefronthq/remark-java.git</url>
     </scm>
     <distributionManagement>
         <repository>
