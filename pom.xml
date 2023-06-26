@@ -49,9 +49,13 @@
     </contributor>
   </contributors>
   <scm>
-    <connection>scm:git:git@github.com:wavefronthq/remark-java.git</connection>
+    <!-- <connection>scm:git:git@github.com:wavefronthq/remark-java.git</connection>
     <developerConnection>scm:git:git@github.com:wavefronthq/remark-java.git</developerConnection>
     <url>git@github.com:wavefronthq/remark-java.git</url>
+    <tag>HEAD</tag> -->
+    <connection>scm:git:git@github.com:alchen1218/remark-java.git</connection>
+    <developerConnection>scm:git:git@github.com:alchen1218/remark-java.git</developerConnection>
+    <url>git@github.com:alchen1218/remark-java.git</url>
     <tag>HEAD</tag>
   </scm>
 
