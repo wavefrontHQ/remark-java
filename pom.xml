@@ -1,79 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-         xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.overzealous</groupId>
-    <artifactId>remark</artifactId>
-    <version>1.1.0</version>
-    <inceptionYear>2011</inceptionYear>
-    <name>Remark</name>
-    <description>Remark is a library for taking (X)HTML input and outputting clean Markdown, Markdown Extra, or
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.wavefront</groupId>
+  <artifactId>remark</artifactId>
+  <version>1.1.0-SNAPSHOT</version>
+  <inceptionYear>2011</inceptionYear>
+  <packaging>pom</packaging>
+
+
+   <name>Remark</name>
+   <description>Remark is a library for taking (X)HTML input and outputting clean Markdown, Markdown Extra, or
         MultiMarkdown compatible text.
-    </description>
-    <url>https://bitbucket.org/OverZealous/remark</url>
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-    <properties>
-            <jdk.version>11</jdk.version>
-    </properties>
-    <developers>
-        <developer>
-            <name>Phil DeJarnett</name>
-            <organization>OverZealous Creations, LLC</organization>
-            <organizationUrl>http://www.overzealous.com</organizationUrl>
-            <roles>
-                <role>Original Developer</role>
-            </roles>
-        </developer>
-        <developer>
-            <name>Guilherme I F L Weizenmann</name>
-            <email>g.weizenmann@gmail.com</email>
-            <organization>ITQuasar</organization>
-            <organizationUrl>http://itquasar.com</organizationUrl>
-            <roles>
-                <role>Developer</role>
-            </roles>
-        </developer>
-    </developers>
-    <contributors>
-        <contributor>
-            <name>Alex Boyko</name>
-            <properties>
-                <github>https://github.com/BoykoAlex</github>
-            </properties>
-        </contributor>
-    </contributors>
-    <scm>
-        <connection>scm:git:git@github.com:giflw/remark-java.git</connection>
-        <developerConnection>scm:git:git@github.com:giflw/remark-java.git</developerConnection>
-        <url>git@github.com:giflw/remark-java.git</url>
-    </scm>
-    <distributionManagement>
-        <repository>
-            <id>bintray-giflw-maven</id>
-            <name>giflw-maven</name>
-            <url>https://api.bintray.com/maven/giflw/maven/remark-java/;publish=1</url>
-        </repository>
-    </distributionManagement>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>${jdk.version}</source>
-                    <target>${jdk.version}</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+  </description>
+  <url>https://bitbucket.org/OverZealous/remark</url>
+  <licenses>
+    <license>
+      <name>The Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>Phil DeJarnett</name>
+      <organization>OverZealous Creations, LLC</organization>
+      <organizationUrl>http://www.overzealous.com</organizationUrl>
+      <roles>
+        <role>Original Developer</role>
+      </roles>
+    </developer>
+    <developer>
+        <name>Guilherme I F L Weizenmann</name>
+        <email>g.weizenmann@gmail.com</email>
+        <organization>ITQuasar</organization>
+        <organizationUrl>http://itquasar.com</organizationUrl>
+        <roles>
+          <role>Developer</role>
+        </roles>
+    </developer>
+  </developers>
+  <contributors>
+    <contributor>
+      <name>Alex Boyko</name>
+        <properties>
+          <github>https://github.com/BoykoAlex</github>
+        </properties>
+    </contributor>
+  </contributors>
+  <scm>
+    <connection>scm:git:git@github.com:wavefronthq/remark-java.git</connection>
+    <developerConnection>scm:git:git@github.com:wavefronthq/remark-java.git</developerConnection>
+    <url>git@github.com:wavefronthq/remark-java.git</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <properties>
+    <jdk.version>11</jdk.version>
+    <java.version>1.8</java.version>
+    <javadoc.sdk.version>8</javadoc.sdk.version>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <tarLongFileMode>gnu</tarLongFileMode>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5</version>
+        <configuration>
+          <source>${jdk.version}</source>
+          <target>${jdk.version}</target>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+          <useReleaseProfile>false</useReleaseProfile>
+          <releaseProfiles>release</releaseProfiles>
+          <goals>deploy</goals>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -108,4 +140,135 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
+  </dependencyManagement>
+
+  <profiles>
+    <profile>
+      <id>disable-java8-doclint</id>
+      <activation>
+        <jdk>[1.8,)</jdk>
+      </activation>
+      <properties>
+        <additionalparam>-Xdoclint:none</additionalparam>
+      </properties>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <version>3.1.1</version>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-enforcer-plugin</artifactId>
+            <version>3.0.0-M2</version>
+            <executions>
+              <execution>
+                <id>enforce-maven</id>
+                <goals>
+                  <goal>enforce</goal>
+                </goals>
+                <configuration>
+                  <rules>
+                    <requireMavenVersion>
+                      <version>[3.2.5,)</version>
+                    </requireMavenVersion>
+                  </rules>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>release</id>
+      <properties>
+        <gpg.useagent>true</gpg.useagent>
+      </properties>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-enforcer-plugin</artifactId>
+            <version>3.0.0-M2</version>
+            <executions>
+              <execution>
+                <id>enforce-maven</id>
+                <goals>
+                  <goal>enforce</goal>
+                </goals>
+                <configuration>
+                  <rules>
+                    <requireMavenVersion>
+                      <version>[3.2.5,)</version>
+                    </requireMavenVersion>
+                  </rules>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>2.2.1</version>
+            <executions>
+              <execution>
+                <id>attach-sources</id>
+                <goals>
+                  <goal>jar-no-fork</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>3.2.0</version>
+            <executions>
+              <execution>
+                <id>attach-javadocs</id>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+                <configuration>
+                  <doclint>none</doclint>
+                  <release>${javadoc.sdk.version}</release>
+                  <source>${javadoc.sdk.version}</source>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.5</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <configuration>
+                  <useAgent>true</useAgent>
+                </configuration>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.sonatype.plugins</groupId>
+            <artifactId>nexus-staging-maven-plugin</artifactId>
+            <version>1.6.3</version>
+            <extensions>true</extensions>
+            <configuration>
+              <serverId>ossrh</serverId>
+              <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+              <autoReleaseAfterClose>true</autoReleaseAfterClose>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>
