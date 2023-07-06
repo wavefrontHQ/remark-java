@@ -5,8 +5,6 @@
   <groupId>com.wavefront</groupId>
   <artifactId>remark</artifactId>
   <version>2023-06.29-SNAPSHOT</version>
-  <inceptionYear>2011</inceptionYear>
-  <packaging>pom</packaging>
 
 
    <name>Remark</name>
