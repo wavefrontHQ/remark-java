@@ -103,7 +103,6 @@
     </plugins>
   </build>
 
-  <dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -138,7 +137,6 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
-  </dependencyManagement>
 
   <profiles>
     <profile>
